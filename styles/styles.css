@@ -1,19 +1,18 @@
-@font-face { 
+@font-face {
   font-family: Gyparody Regular;
   src: url('./Gyparody.ttf');
-} 
-@font-face { 
+}
+@font-face {
   font-family: Korinna Bold;
   src: url('./Korinna Bold.ttf');
-} 
-
+}
 
 .title-img {
   width: 100%;
 }
 
 .setup-screen {
-  background: #147bce;
+  background: #251980;
   color: #a6d7ff;
   text-shadow: 2px 2px #004e8c;
   font-family: 'Gyparody Regular', sans-serif;
@@ -29,9 +28,8 @@ h1 {
 .setup-screen h1 {
   margin-top: 5px;
   margin-bottom: 0;
-  font-size: 24vw;
+  font-size: 12vw;
 }
-
 
 .file-info {
   font-family: monospace;
@@ -57,11 +55,12 @@ h1 {
   margin-left: 10px;
 }
 
-.start-button, .start-button:hover {
+.start-button,
+.start-button:hover {
   background: #6bbb6b;
 }
 
-.game-container { 
+.game-container {
   position: absolute;
   width: 100%;
   text-align: center;
@@ -80,7 +79,7 @@ h1 {
 .title {
   background: #004e8c;
   width: 100%;
-  height: 100px; 
+  height: 100px;
 }
 
 table {
@@ -89,19 +88,19 @@ table {
   width: 100%;
   height: 100%;
   table-layout: fixed;
-border-collapse: separate;
-           border-spacing: 5px;
+  border-collapse: separate;
+  border-spacing: 5px;
 }
 
-
-th, td {
+th,
+td {
   box-shadow: 0 0 5px #000000 inset;
   text-shadow: 2px 2px #000;
   text-transform: uppercase;
   font-size: 20px;
   text-align: center;
   vertical-align: middle;
-  background: #0d6bb6;
+  background: #251980;
 }
 
 th {
@@ -110,14 +109,14 @@ th {
 
 td {
   cursor: default;
-  color: #c68b33;
-  text-shadow: darkgoldenrod;
+  color: #e2cc25;
+  text-shadow: rgb(179, 147, 19);
   font-size: 35px;
   text-shadow: 2px 2px 5px #000;
 }
 
 td:hover {
-  background: #147bce;
+  background: #1a125a;
   color: #e7a646;
 }
 
@@ -134,16 +133,20 @@ button {
   border-radius: 3px;
   -webkit-appearance: none;
 }
-button:hover { background: #f1ba69; }
+button:hover {
+  background: #f1ba69;
+}
 
-.disabled-button, .disabled-button:hover {
-  background: #0d6bb6;
+.disabled-button,
+.disabled-button:hover {
+  background: #251980;
   color: #004e8c;
   cursor: default;
   pointer-events: none;
 }
 
-input[type="text"], textarea {
+input[type='text'],
+textarea {
   padding-left: 7px;
   height: 25px;
   border-radius: 4px;
@@ -155,9 +158,10 @@ input[type="text"], textarea {
 
 .question {
   font-family: 'Korinna Bold', sans-serif;
-  background: #147bce;
+  background: #251980;
   color: #fff;
-  font-size: 35px;
+  /* font-size: 35px; */
+  font-size: 10vh;
   text-transform: uppercase;
   text-shadow: 2px 2px 5px #000;
   height: 100%;
@@ -176,7 +180,7 @@ input[type="text"], textarea {
   border-radius: 2px;
   bottom: 10px;
   width: 97%;
-  position: absolute; 
+  position: absolute;
 }
 
 .players-disabled {
@@ -184,11 +188,23 @@ input[type="text"], textarea {
   opacity: 0.2;
 }
 
-
 .player-text {
   font-family: 'Permanent Marker', cursive;
   margin: 0;
   color: #fff;
+}
+
+#player-names-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#player-names {
+  display: grid;
+  width: 700px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  margin: 50px 0;
 }
 
 .scoreboard .player-text {
@@ -203,7 +219,7 @@ input[type="text"], textarea {
 }
 
 .scoreboard .player {
-  background: #0d6bb6;
+  background: #251980;
   width: 180px;
   box-shadow: 0 0 5px #000000 inset;
   padding: 5px;
@@ -271,13 +287,14 @@ input[type="text"], textarea {
   margin: 0 auto;
 }
 
-.wager-box button, .wager-box button:hover {
-  background:  #58b158;
+.wager-box button,
+.wager-box button:hover {
+  background: #58b158;
 }
 
 .final-jeopardy {
   font-family: 'Korinna Bold', sans-serif;
-  background: #147bce;
+  background: #251980;
   color: #fff;
   font-size: 35px;
   text-transform: uppercase;
@@ -306,30 +323,42 @@ input[type="text"], textarea {
   cursor: pointer;
   text-align: center;
   padding: 5px;
-  background: #147bce;
+  background: #251980;
   color: #a6d7ff;
   width: 85px;
   display: inline-block;
 }
 
 @keyframes blink {
-    0% { box-shadow: 0 0 15px #a6d7ff; }
-    50% { box-shadow: none; }
-    100% { box-shadow: 0 0 15px #a6d7ff; }
+  0% {
+    box-shadow: 0 0 15px #a6d7ff;
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 0 15px #a6d7ff;
+  }
 }
 
 @-webkit-keyframes blink {
-    0% { box-shadow: 0 0 15px #a6d7ff; }
-    50% { box-shadow: 0 0 0; }
-    100% { box-shadow: 0 0 15px #a6d7ff; }
+  0% {
+    box-shadow: 0 0 15px #a6d7ff;
+  }
+  50% {
+    box-shadow: 0 0 0;
+  }
+  100% {
+    box-shadow: 0 0 15px #a6d7ff;
+  }
 }
 
 .blink {
-    -webkit-animation: blink 1.0s linear infinite;
-    -moz-animation: blink 1.0s linear infinite;
-    -ms-animation: blink 1.0s linear infinite;
-    -o-animation: blink 1.0s linear infinite;
-    animation: blink 1.0s linear infinite;
+  -webkit-animation: blink 1s linear infinite;
+  -moz-animation: blink 1s linear infinite;
+  -ms-animation: blink 1s linear infinite;
+  -o-animation: blink 1s linear infinite;
+  animation: blink 1s linear infinite;
 }
 
 .edit-screen .category-section {
